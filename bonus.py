@@ -1,4 +1,10 @@
 def change_string_format(old_string:str):
+    '''convert uppercase latter to lowercase letter and add space before the letter 
+       args:
+           old_string(string):the input string that will be formatted 
+       return:
+           str:the formatted string with uppercase letter turned to lowercase letters and space before the uppercase letter
+    '''
 
     if isinstance(old_string,str):
         new_string=""
