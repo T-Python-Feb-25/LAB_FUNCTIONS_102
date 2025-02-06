@@ -1,5 +1,6 @@
 
 def separates_by_capital(string:str):
+    string = string.lstrip() # remove spaces
     result = ""
     if not isinstance(string,str):
         print("input is not string. ")
@@ -14,4 +15,4 @@ def separates_by_capital(string:str):
     
     return result
 
-print(separates_by_capital("helloWorldThere"))
+print(separates_by_capital("  helloWorldThere" ))
