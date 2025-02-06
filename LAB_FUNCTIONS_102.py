@@ -23,4 +23,4 @@ def find_primes(start:int,end:int):
             print(x)
         found=True
     
-find_primes(1,5)
+find_primes(25,50)
