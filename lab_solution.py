@@ -26,8 +26,8 @@ def find_primes(num1:int ,num2:int):
             continue
         is_prime=True
 
-        #print(f"test{i+1//2}") to optimize the performance 
-        for x in range(2,i+1//2):
+        # to optimize the performance 
+        for x in range(2,int(i**0.5)+1):
             if(i%x==0):
                 is_prime=False
                 break
@@ -35,4 +35,4 @@ def find_primes(num1:int ,num2:int):
             print(i)
 
 
-find_primes(100,200)
+find_primes(1,100)
