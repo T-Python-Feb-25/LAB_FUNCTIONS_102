@@ -24,12 +24,15 @@ def find_primes(num1:int ,num2:int):
         if(i==1 or i==2):
             print(i)
             continue
+        is_prime=True
 
-        for x in range(2,i):
+        #print(f"test{i+1//2}") to optimize the performance 
+        for x in range(2,i+1//2):
             if(i%x==0):
+                is_prime=False
                 break
-        else:
+        if(is_prime):
             print(i)
 
 
-find_primes(25,50)
+find_primes(100,200)
