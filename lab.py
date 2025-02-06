@@ -1,31 +1,9 @@
-'''# LAB_FUNCTIONS_102
-
-### hint
-a prime number i a number that is divisible only by itself and 1 (e.g. 2, 3, 5, 7, 11)    
-Also , you can think of it as A Prime Number is a number that cannot be made by multiplying other whole numbers
-
-
-#### for example, primes between `25` and `50` are:
-```
-29   
-31   
-37   
-41   
-43   
-47   
-```
-
-# Bonus
-## write a function that takes a string as a parameter
-- first check that the type of the parameter is of type str
-- then, it should separates the word at any capital letter and replace it with a small letter 
-- and  should return the new modified string !
-
-Example: `helloWorldThere` should return :
-```hello world there```
-'''
-def find_primes(a:int,b:int): 
-    def is_prime(n: int) -> bool:   # first check if the number is prime.
-        if n <= 1: #handle exception
-            return False
-        
+#first check if the number is prime
+def is_prime(n: int) -> bool:
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):  # Check divisibility from 2 to the square root of n
+        if n % i == 0:
+            return False  # Found a divisor, not a prime
+    return True  # No divisors found, it's prime
+print(is_prime(8))
