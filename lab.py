@@ -1,14 +1,15 @@
-def find_primes(start, end):
-    """Prints all prime numbers between start and end (inclusive)."""
-    for num in range(start, end + 1):
-        if num > 1:  # Prime numbers are greater than 1
-            is_prime = True
-            for i in range(2, int(num**0.5) + 1):
-                if num % i == 0:
-                    is_prime = False
-                    break
-            if is_prime:
-                print(num)
+start = int(input("start of the interval: ")) 
+end = int(input("end of the interval: "))
 
-# Example usage:
-find_primes(10, 50)
+def find_primes(start,end):
+    for num in range(start,end+1):
+        if num > 1:  #1 and negative numbers aren't prime numbers
+        
+         for i in range(2,num):
+             if num % i == 0:
+                 break 
+         else:
+             print(num)
+             
+find_primes(start,end)
+print(f"all prime numbers between {start} and {end} have been printed")
