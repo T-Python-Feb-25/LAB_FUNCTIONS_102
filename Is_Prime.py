@@ -18,3 +18,10 @@ end = int(input("Enter the ending number: "))
 
 # Get prime numbers in the range and print them
 prime_numbers = prime_numbers_between(start, end)
+
+
+'''
+this is the first Python lab in the Course
+Feb7, 2025
+By Mohammed Albushaier
+'''
